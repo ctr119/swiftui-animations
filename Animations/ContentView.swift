@@ -5,10 +5,30 @@ struct ContentView: View {
     @State private var sonarAmount = 1.0
     
     var body: some View {
-        VStack(spacing: 100) {
-            bouncingButton
+        print(bounceAmount)
+        
+        return VStack(spacing: 100) {
+            stepperBindingAnimation
             
-            sonarButton
+//            bouncingButton
+//
+//            sonarButton
+        }
+    }
+    
+    private var stepperBindingAnimation: some View {
+        VStack {
+            Stepper("Scale amount",
+                    value: $bounceAmount.animation(
+                        .easeInOut(duration: 1)
+                                .repeatCount(3, autoreverses: true)
+                    ),
+                    in: 1...10)
+            
+            Spacer()
+            
+            mainButton
+                .scaleEffect(bounceAmount)
         }
     }
     
