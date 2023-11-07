@@ -3,17 +3,35 @@ import SwiftUI
 struct ContentView: View {
     @State private var bounceAmount = 1.0
     @State private var sonarAmount = 1.0
+    @State private var rotationAmount = 0.0
     
     var body: some View {
         print(bounceAmount)
         
         return VStack(spacing: 100) {
-            stepperBindingAnimation
+            explicitAnimation
+            
+//            stepperBindingAnimation
             
 //            bouncingButton
 //
 //            sonarButton
         }
+    }
+    
+    private var explicitAnimation: some View {
+        Button("Tap Me") {
+            withAnimation(
+                .spring(response: 1, dampingFraction: 0.5, blendDuration: 0.5)
+            ) {
+                rotationAmount += 360
+            }
+        }
+        .padding(50)
+        .background(.red)
+        .foregroundStyle(.white)
+        .clipShape(Circle())
+        .rotation3DEffect(.degrees(rotationAmount), axis: (0, 1, 0))
     }
     
     private var stepperBindingAnimation: some View {
