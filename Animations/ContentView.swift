@@ -4,12 +4,15 @@ struct ContentView: View {
     @State private var bounceAmount = 1.0
     @State private var sonarAmount = 1.0
     @State private var rotationAmount = 0.0
+    @State private var enableColor = false
     
     var body: some View {
         print(bounceAmount)
         
         return VStack(spacing: 100) {
-            explicitAnimation
+            colorAnimation
+            
+//            explicitAnimation
             
 //            stepperBindingAnimation
             
@@ -17,6 +20,17 @@ struct ContentView: View {
 //
 //            sonarButton
         }
+    }
+    
+    private var colorAnimation: some View {
+        Button("Tap Me") {
+            enableColor.toggle()
+        }
+        .padding(50)
+        .background(enableColor ? .red : .blue)
+        .foregroundStyle(.white)
+        .clipShape(RoundedRectangle(cornerRadius: enableColor ? 60 : 0))
+        .animation(.default, value: enableColor)
     }
     
     private var explicitAnimation: some View {
