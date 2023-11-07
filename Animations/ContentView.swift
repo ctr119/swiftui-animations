@@ -28,7 +28,7 @@ struct ContentView: View {
         }
         .padding(50)
         .background(enableColor ? .red : .blue)
-        .animation(.default, value: enableColor)
+        .animation(.default, value: enableColor) // setting the animation to nil, fully disables the animation, but the next keeps working as normally
         .foregroundStyle(.white)
         .clipShape(RoundedRectangle(cornerRadius: enableColor ? 60 : 0))
         .animation(.spring(response: 1, dampingFraction: 0.5, blendDuration: 0.5),
