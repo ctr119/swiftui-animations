@@ -28,9 +28,11 @@ struct ContentView: View {
         }
         .padding(50)
         .background(enableColor ? .red : .blue)
+        .animation(.default, value: enableColor)
         .foregroundStyle(.white)
         .clipShape(RoundedRectangle(cornerRadius: enableColor ? 60 : 0))
-        .animation(.default, value: enableColor)
+        .animation(.spring(response: 1, dampingFraction: 0.5, blendDuration: 0.5),
+                   value: enableColor)
     }
     
     private var explicitAnimation: some View {
