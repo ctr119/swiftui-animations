@@ -13,6 +13,8 @@
 		3E0FFF022AF85D7A0011EC80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0FFF012AF85D7A0011EC80 /* Preview Assets.xcassets */; };
 		3E383D7E2B018F5C000AB461 /* Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E383D7D2B018F5C000AB461 /* Gestures.swift */; };
 		3E383D802B0193C4000AB461 /* ViewsVisibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E383D7F2B0193C4000AB461 /* ViewsVisibility.swift */; };
+		3E383D832B0195CA000AB461 /* CornerRadiusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E383D822B0195CA000AB461 /* CornerRadiusModifier.swift */; };
+		3E383D852B0196DA000AB461 /* CustomTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E383D842B0196DA000AB461 /* CustomTransitionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		3E0FFF012AF85D7A0011EC80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E383D7D2B018F5C000AB461 /* Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gestures.swift; sourceTree = "<group>"; };
 		3E383D7F2B0193C4000AB461 /* ViewsVisibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsVisibility.swift; sourceTree = "<group>"; };
+		3E383D822B0195CA000AB461 /* CornerRadiusModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusModifier.swift; sourceTree = "<group>"; };
+		3E383D842B0196DA000AB461 /* CustomTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 				3E0FFEFA2AF85D790011EC80 /* AnimationsApp.swift */,
 				3E0FFEFC2AF85D790011EC80 /* ContentView.swift */,
 				3E383D7D2B018F5C000AB461 /* Gestures.swift */,
-				3E383D7F2B0193C4000AB461 /* ViewsVisibility.swift */,
 				3E0FFEFE2AF85D7A0011EC80 /* Assets.xcassets */,
 				3E0FFF002AF85D7A0011EC80 /* Preview Content */,
+				3E383D812B0195AD000AB461 /* Transitions */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -71,6 +75,16 @@
 				3E0FFF012AF85D7A0011EC80 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E383D812B0195AD000AB461 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				3E383D7F2B0193C4000AB461 /* ViewsVisibility.swift */,
+				3E383D822B0195CA000AB461 /* CornerRadiusModifier.swift */,
+				3E383D842B0196DA000AB461 /* CustomTransitionView.swift */,
+			);
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +159,9 @@
 			files = (
 				3E383D7E2B018F5C000AB461 /* Gestures.swift in Sources */,
 				3E0FFEFD2AF85D790011EC80 /* ContentView.swift in Sources */,
+				3E383D852B0196DA000AB461 /* CustomTransitionView.swift in Sources */,
 				3E383D802B0193C4000AB461 /* ViewsVisibility.swift in Sources */,
+				3E383D832B0195CA000AB461 /* CornerRadiusModifier.swift in Sources */,
 				3E0FFEFB2AF85D790011EC80 /* AnimationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
